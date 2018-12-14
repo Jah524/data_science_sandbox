@@ -24,13 +24,17 @@ RUN apt install -y python3-pip
 RUN mkdir -p ~/workspace
 RUN mkdir -p ~/.jupyter
 COPY .jupyter /root/.jupyter/
+
 WORKDIR workspace
-COPY ./ ./
+COPY ./Pipfile ./
+COPY ./Pipfile.lock ./
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
-RUN pipenv install   
 
 EXPOSE 9000
+
+RUN pipenv install   
+
 CMD ["/bin/bash"]
 #ENTRYPOINT ["nohup", "pipenv", "run", "jupyter", "notebook", "--allow-root", "2>&1", "1>log.txt", "&"]
