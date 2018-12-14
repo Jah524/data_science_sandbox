@@ -10,7 +10,7 @@ RUN add-apt-repository -y ppa:jonathonf/python-3.6 &&\
     apt install -y python3-pip
 
 # Base libraries
-RUN apt install -y curl wget
+RUN apt install -y curl wget emacs24-nox
 
 RUN pip3 install pipenv
 
