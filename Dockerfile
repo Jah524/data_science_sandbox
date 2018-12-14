@@ -32,4 +32,5 @@ ENV LANG C.UTF-8
 RUN pipenv install   
 
 EXPOSE 9000
-ENTRYPOINT ["pipenv", "run", "jupyter", "notebook", "--allow-root"]
+CMD ["/bin/bash"]
+#ENTRYPOINT ["nohup", "pipenv", "run", "jupyter", "notebook", "--allow-root", "2>&1", "1>log.txt", "&"]

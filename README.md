@@ -11,4 +11,7 @@ docker build -t nyaos .
 ```
 # serverの場合、9000しかポートフォワードしてない点に注意
 % docker run --runtime=nvidia -p 9000:9000 nyaos
+
+# ここからDockerのコンテナ内
+% nohup pipenv run  jupyter notebook --allow-root 2>&1 1>log.txt &  
 ```
