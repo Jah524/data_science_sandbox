@@ -6,6 +6,16 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+keras = "*"
+numpy = "*"
+scipy = "*"
+notify-run = "*"
+matplotlib = "*"
+seaborn = "*"
+jupyter = "*"
+awscli = "*"
+mecab-python3 = "*"
+tensorflow-gpu = "*"
 
 [requires]
 python_version = "3.6"
