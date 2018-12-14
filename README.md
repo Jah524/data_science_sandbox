@@ -1,17 +1,18 @@
 # README
 
-``` verify GPU
-pipenv run python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
-```
+## Build
 
 ```
-docker build -t nyaos .
+% docker build -t data-science .
+% docker run --runtime=nvidia -p 9000:9000 -v "$(pwd):/notebooks/workspace" -it data-science
+# Docker Container
+% nohup pipenv run  jupyter notebook --allow-root 2>&1 1>log.txt &
+# go to localhost:9000 (`datascience` has set to default as login key)
 ```
 
-```
-# serverの場合、9000しかポートフォワードしてない点に注意
-% docker run --runtime=nvidia -p 9000:9000 -v "$(pwd):/notebooks/workspace" nyaos
+## Trouble Shootings
 
-# ここからDockerのコンテナ内
-% nohup pipenv run  jupyter notebook --allow-root 2>&1 1>log.txt &  
-```
+### GPU Sync Failed
+
+This error occures when you use some kernels.
+Terminate kernel grabs GPU resource (or relaunch Jupyter Notebook as naive solution)
