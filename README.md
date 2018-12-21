@@ -3,7 +3,7 @@
 ## Launch Jupyter Notebook
 
 ```
-python3 -m jupyter notebook --port 9000
+python3 -m notebook --port 9010
 ```
 
 ## Using GPU (on Docker)
