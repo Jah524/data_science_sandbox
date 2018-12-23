@@ -2,3 +2,6 @@
 log.txt
 *.ipynb_checkpoints*
 __pycache__/
+tensorflow/21_checkpoint.keras
+tensorflow/21_logs/
+tensorflow/data/
