@@ -5,3 +5,11 @@ __pycache__/
 tensorflow/21_checkpoint.keras
 tensorflow/21_logs/
 tensorflow/data/
+
+# kaggle
+data/
+input/
+*.csv
+*.gz
+*.pkl
+*.swp
