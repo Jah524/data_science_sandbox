@@ -16,6 +16,7 @@ jupyter = "*"
 awscli = "*"
 mecab-python3 = "*"
 tensorflow-gpu = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.6"
