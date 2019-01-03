@@ -17,6 +17,9 @@ awscli = "*"
 mecab-python3 = "*"
 tensorflow-gpu = "*"
 gensim = "*"
+tqdm = "*"
+sklearn = "*"
+unidecode = "*"
 
 [requires]
 python_version = "3.6"
