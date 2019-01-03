@@ -13,3 +13,4 @@ input/
 *.gz
 *.pkl
 *.swp
+*.h5
